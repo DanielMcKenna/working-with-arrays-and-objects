@@ -21,6 +21,8 @@ var carDetails = {
   Use object destructuring to save the property values from the object carDetails into new variables. 
 */
 
+const { color, make, model, year } = carDetails;
+
 //Code Here
 
 
@@ -35,7 +37,7 @@ var carDetails = {
 
 function greeting( obj ) {
   //Code Here
-  
+  const {title, firstName, lastName} = obj;
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
@@ -55,6 +57,12 @@ function greeting( obj ) {
 
 //Code Here
 
+const totalPopulation = (obj) => {
+  const { utah, california, texas, arizona } = obj;
+
+  return utah + california + texas + arizona;
+}
+
 
 
 ////////// PROBLEM 4 //////////
@@ -68,6 +76,16 @@ function greeting( obj ) {
 */
 
 //Code Here
+
+const ingredients = (obj) => {
+
+  let stringArr = [];
+  const { carb, fat, protein} = obj;
+
+  stringArr.push(carb, fat, protein);
+
+  return stringArr;
+}
 
 
 
@@ -87,6 +105,19 @@ function greeting( obj ) {
 
 //Code Here
 
+const largeNumbers = (obj) => {
+  const { first, second, third } = obj;
+
+  if (first < second && first < third ) {
+    return first;
+  }
+  else if (second < first && second < third) {
+    return second;
+  }
+  else {
+    return third;
+  }
+}
 
 
 ////////// PROBLEM 6 //////////
@@ -98,5 +129,20 @@ function greeting( obj ) {
 */
 
 //Code Here
+
+const numberGroups = (obj) => {
+  
+  const { a, b, c } = obj;
+
+  if (a.length > b.length && a.length > c.length) {
+    return a;
+  }
+  else if (b.length > a.length && b.length > c.length) {
+    return b;
+  }
+  else {
+    return c;
+  }
+}
 
 
