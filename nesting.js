@@ -52,6 +52,35 @@ var employees = [
 
 //Code Here
 
+const employeeUpdater = () => {
+  for(let key in employees) {
+    for(let innerKey in employees[key]){
+      if(employees[key][innerKey] === 'Theo'){
+        delete employees[`${key}`][`${innerKey}`];
+      }
+      else if(employees[key][innerKey] === 'Lorie'){
+        employees[key][innerKey].department = ["HR"];
+
+      }
+    }
+  }
+  console.log(employees);
+
+  // for (let i = 0; i <= employees.length; i++ ){
+  //   for(let j = 0; j <= 5; j++){
+  //     if(employees.firstName === 'Theo'){
+  //       delete employees[j];
+  //     }
+  //     else if(employees.firstName === 'Lorie'){
+  //       employees.department = "HR";
+  //     }
+  //   }
+  // }
+  // console.log(employees);
+}
+
+employeeUpdater();
+
 
 
 ////////// PROBLEM 2 //////////
